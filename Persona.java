@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Persona {
     private String Nombres,pat,mat;
     private int ci;
@@ -42,5 +44,12 @@ public class Persona {
     }
     public void mostrar(){
         System.out.println("     PERSONA: nombres: "+getNombres()+", paterno: "+getPat()+", materno: "+getMat()+", CI: "+getCI());
+    }
+    public void leer(){
+        Scanner lee=new Scanner(System.in);
+        System.out.println("Persona: ");
+        System.out.print("    Nombres: ");String nomb=lee.nextLine();setNombres(nomb);
+        System.out.print("    Paterno: ");String pater=lee.nextLine();setPat(pater);
+        System.out.print("    materno: ");String mater=lee.nextLine();setMat(mater);
     }
 }

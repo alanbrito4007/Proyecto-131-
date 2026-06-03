@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Producto {
     private String Nombre,Tipo;
     private float Precio;
@@ -8,7 +10,8 @@ public class Producto {
         Precio=precio;
         Caducidad=caducidad;
     }
-
+public Producto(){
+}
     public String getCaducidad() {
         return Caducidad;
     }
@@ -43,5 +46,13 @@ public class Producto {
 
     public void mostrar(){
         System.out.println("     PRODUCTO: nombre: "+getNombre()+", tipo: "+getTipo()+", precio: "+getPrecio()+", caducidad: "+getCaducidad());
+    }
+    public void leer(){
+        Scanner lee=new Scanner(System.in);
+        System.out.println("Producto ");
+        System.out.print("    Nombre: ");String nomb=lee.nextLine();setNombre(nomb);
+        System.out.print("    Tipo: ");String tipo=lee.nextLine();setTipo(tipo);
+        System.out.print("    Precio: ");float prec=lee.nextInt();setPrecio(prec);
+        System.out.print("    Caducidad: ");String caduc=lee.next();setCaducidad(caduc);
     }
 }

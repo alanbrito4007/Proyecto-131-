@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Compra {
     private Producto Producto;
     private String Lugar;
@@ -11,7 +13,6 @@ public class Compra {
         Persona =persona;
         Cantidad=cantidad;
     }
-
     public int getCantidad() {
         return Cantidad;
     }
@@ -49,5 +50,14 @@ public class Compra {
         System.out.println("     lugar: "+getLugar());
         getPersona().mostrar();
         System.out.println("     cantidad: "+getCantidad());
+    }
+    public void leer(){
+        Scanner lee=new Scanner(System.in);
+        System.out.println("[ Introduzca una compra ]");
+        Producto producto=new Producto();producto.leer();setProducto(producto);
+        Persona persona=new Persona();persona.leer();setPersona(persona);
+        System.out.print("Lugar de compra del producto: ");String lugar= lee.nextLine();setLugar(lugar);
+        System.out.print("Cantidad comprada: ");int cant= lee.nextInt();setCantidad(cant);
+
     }
 }

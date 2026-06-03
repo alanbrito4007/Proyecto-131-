@@ -1,8 +1,8 @@
 public class NodoPC {
     private ProductoCliente productoCliente;
-    private NodoPC sig;
+    private NodoPC sig,ant;
     public NodoPC(){
-        sig=null;
+        sig=ant=null;
     }
 
     public ProductoCliente getProductoCliente() {
@@ -19,5 +19,13 @@ public class NodoPC {
 
     public void setSig(NodoPC sig) {
         this.sig = sig;
+    }
+
+    public NodoPC getAnt() {
+        return ant;
+    }
+
+    public void setAnt(NodoPC ant) {
+        this.ant = ant;
     }
 }

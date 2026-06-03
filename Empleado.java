@@ -45,4 +45,8 @@ public class Empleado extends Persona{
     public void setSueldo(float sueldo) {
         Sueldo = sueldo;
     }
+
+    public void leer(){
+
+    }
 }

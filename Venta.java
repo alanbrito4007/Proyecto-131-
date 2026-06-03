@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Venta {
     private ReciboCliente ReciboCliente;
     private String Fecha;
@@ -24,10 +26,14 @@ public class Venta {
     }
 
     public void leer(){
-
+        Scanner lee=new Scanner(System.in);
+        System.out.println("[ INTRODUZCA VENTA ]");
+        ReciboCliente recb=new ReciboCliente();recb.leer();setReciboCliente(recb);
+        System.out.print("fecha: "+recb.getFecha());setFecha(recb.getFecha());
     }
     public void mostrar(){
         System.out.println("VENTA");
         System.out.println("fecha: "+getFecha()+" nro de recibo: "+getReciboCliente().getNroRecibo());
     }
+
 }
